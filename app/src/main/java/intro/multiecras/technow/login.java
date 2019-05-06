@@ -2,21 +2,19 @@ package intro.multiecras.technow;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Pesquisa1 extends Fragment {
+public class login extends Fragment {
 
 
-    public Pesquisa1() {
+    public login() {
         // Required empty public constructor
     }
 
@@ -25,15 +23,7 @@ public class Pesquisa1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pesquisa1, container, false);
-    }
-
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        ListView pesquisa1 = getView().findViewById(R.id.listaPesquisa1);
-        pesquisa1.setAdapter(new AdaptadorPesquisa1(getContext()));
-
+        return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
 }

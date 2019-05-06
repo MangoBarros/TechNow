@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/navigation_inicia_sessao"
+        android:orderInCategory="100"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="@string/iniciarsessao"
+        app:showAsAction="always" >
+
+    <menu>
+
+        <item
+            android:id="@+id/user"
+            android:orderInCategory="100"
+            android:title="Iniciar Sessão"
+            android:icon="@drawable/user"
+            android:onClick="login_click"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/Comparador"
+            android:orderInCategory="100"
+            android:title="Comparador"
+            android:icon="@drawable/user"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/Encomendas"
+            android:orderInCategory="100"
+            android:title="Encomendas"
+            android:icon="@drawable/user"
+            app:showAsAction="never"
+            />
+
+    </menu>
+
+    </item>
+
+</menu>

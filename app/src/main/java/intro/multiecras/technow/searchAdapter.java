@@ -2,7 +2,6 @@ package intro.multiecras.technow;
 
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,13 +11,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.UUID;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AdaptadorPesquisa1 extends BaseAdapter {
+public class searchAdapter extends BaseAdapter {
     private final Context ctx;
 
     private int [] botoes = new int []{
@@ -53,7 +50,7 @@ public class AdaptadorPesquisa1 extends BaseAdapter {
 
 
 
-    public AdaptadorPesquisa1(Context ctx) {
+    public searchAdapter(Context ctx) {
         this.ctx =ctx;
     }
 
@@ -75,7 +72,7 @@ public class AdaptadorPesquisa1 extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = LayoutInflater.from(this.ctx).inflate(R.layout.row_pesquisa1,null);
+        View v = LayoutInflater.from(this.ctx).inflate(R.layout.row_search,null);
 
         ImageView img = v.findViewById(R.id.imgItem);
         img.setImageResource(this.imgs[position]);
