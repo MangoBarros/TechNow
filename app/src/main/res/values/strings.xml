@@ -20,4 +20,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="voltar_sessao">Voltar</string>
+    <string name="comparador">Comparador</string>
+    <string name="encomendas">Encomendas</string>
+    <string name="preco">Preço</string>
+    <string name="specs">Especificações</string>
 </resources>

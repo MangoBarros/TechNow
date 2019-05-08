@@ -10,13 +10,13 @@ public class Dados {
     public static final int[] imgs =new int[]{
             R.drawable.samsung,
             R.drawable.samsung2,
-            R.drawable.Apple_iPhone_6S_16GB_Cinzento_Sideral,
-            R.drawable.Apple_MacBook_Pro_13_Retina_i5_2_3GHz_8GB_128GB_Intel_Iris_Plus_640_Cinzento_Sideral
+            R.drawable.apple_iphone_6s,
+            R.drawable.apple_mac_pro,
             R.drawable.huawuei,
-            R.drawable.smartWatch,
+            R.drawable.smartwatch,
             R.drawable.mac_2,
             R.drawable.surface,
-            R.drawable.Microsoft_Surface_Pro_Core_i5_256GB_8GB
+            R.drawable.surface_pro
 
 
     };
@@ -43,7 +43,12 @@ public class Dados {
         produtos.add(item8);
         produtos.add(item9);
 
+
+        produtosComparar.add(item1);
+        produtosComparar.add(item2);
+
     }
+
 
 
 }

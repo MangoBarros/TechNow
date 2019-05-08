@@ -17,7 +17,7 @@
         <item
             android:id="@+id/user"
             android:orderInCategory="100"
-            android:title="Iniciar Sessão"
+            android:title="@string/inicia_sessap"
             android:icon="@drawable/user"
             android:onClick="login_click"
             app:showAsAction="never"
@@ -25,7 +25,7 @@
         <item
             android:id="@+id/Comparador"
             android:orderInCategory="100"
-            android:title="Comparador"
+            android:title="@string/comparador"
             android:onClick="comparador_click"
             android:icon="@drawable/user"
             app:showAsAction="never"
@@ -33,7 +33,7 @@
         <item
             android:id="@+id/Encomendas"
             android:orderInCategory="100"
-            android:title="Encomendas"
+            android:title="@string/encomendas"
             android:icon="@drawable/user"
             app:showAsAction="never"
             />
