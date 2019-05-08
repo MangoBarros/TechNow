@@ -26,6 +26,7 @@
             android:id="@+id/Comparador"
             android:orderInCategory="100"
             android:title="Comparador"
+            android:onClick="comparador_click"
             android:icon="@drawable/user"
             app:showAsAction="never"
             />

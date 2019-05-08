@@ -35,7 +35,6 @@ public class searchAdapter extends BaseAdapter {
             "Computador",
             "Computador",
             "Computador"
-
     };
 
     private int [] imgs  = new int[]{
@@ -45,7 +44,6 @@ public class searchAdapter extends BaseAdapter {
             R.drawable.carrinho,
             R.drawable.carrinho,
             R.drawable.carrinho,
-
     };
 
 

@@ -15,4 +15,9 @@
     <string name="pesquisa_menu">Pesquisa</string>
     <string name="carrinho">Carrinho de Compras</string>
     <string name="confirmar_email"><p>Foi lhe enviado</p> um email de confirmação para o email.<p>Seja bem vindo</p> </string>
+    <string name="inicia_sessap">Iniciar Sessão</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="voltar_sessao">Voltar</string>
 </resources>
