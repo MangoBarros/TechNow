@@ -197,6 +197,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
 
     }
+    public void comparador_click2(View view, int i) {
+
+
+        ComparadorItem comparador = new ComparadorItem();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
+
+    }
+
+
 
 
 

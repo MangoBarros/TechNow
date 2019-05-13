@@ -36,35 +36,68 @@
 
                 />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_toRightOf="@id/imgItem">
+                android:layout_toEndOf="@id/imgItem">
                 <TextView
                     android:id="@+id/textItem"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_width="140dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="20dp"
                     android:layout_height="wrap_content"
 
                     />
 
-                <ImageButton
-                    android:id="@+id/addCarrinobutton"
-                    android:layout_width="80dp"
-                    android:backgroundTint="@android:color/transparent"
-                    android:layout_gravity="start"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="0dp"
+                <LinearLayout
+                    android:id="@+id/botoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textItem">
+                    <ImageButton
+                        android:id="@+id/addCarrinobutton"
+                        android:layout_width="80dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_gravity="start"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/textItem"
+
+                        />
+
+                    <ImageButton
+                        android:id="@+id/addComparadorbutton"
+                        android:layout_width="80dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_gravity="start"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/textItem"
+
+                        />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/textpreco"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/botoes"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold" />
 
-                    />
 
-
-            </LinearLayout>
+            </RelativeLayout>
 
 
         </RelativeLayout>
