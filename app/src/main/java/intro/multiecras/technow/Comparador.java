@@ -15,10 +15,10 @@ import android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class comparador extends Fragment {
+public class Comparador extends Fragment {
 
 
-    public comparador() {
+    public Comparador() {
         // Required empty public constructor
     }
 
@@ -39,7 +39,9 @@ public class comparador extends Fragment {
 
         if (Dados.produtosComparar.size() <= 0) {
             ComparadorItem ci1 = new ComparadorItem();
+            ci1.setPos(1);
             ComparadorItem ci2 = new ComparadorItem();
+            ci2.setPos(2);
 
             FragmentManager manager = getActivity().getSupportFragmentManager();
             manager.beginTransaction()
@@ -54,8 +56,10 @@ public class comparador extends Fragment {
             b2.putString("prod_name", null);
 
             ComparadorItem ci1 = new ComparadorItem();
-            ci1.setArguments(b1);
+            ci1.setPos(1);
             ComparadorItem ci2 = new ComparadorItem();
+            ci2.setPos(2);
+            ci1.setArguments(b1);
             ci2.setArguments(b2);
 
             FragmentManager manager = getActivity().getSupportFragmentManager();
@@ -69,8 +73,13 @@ public class comparador extends Fragment {
 
             b1.putString("prod_name", Dados.produtosComparar.get(0).nome);
             b2.putString("prod_name", Dados.produtosComparar.get(1).nome);
+
             ComparadorItem ci1 = new ComparadorItem();
+            ci1.setPos(1);
             ComparadorItem ci2 = new ComparadorItem();
+            ci2.setPos(2);
+            ci1.setArguments(b1);
+            ci2.setArguments(b2);
 
             FragmentManager manager = getActivity().getSupportFragmentManager();
             manager.beginTransaction()

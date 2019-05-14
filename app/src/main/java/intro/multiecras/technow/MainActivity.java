@@ -5,18 +5,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
 
@@ -80,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void create_click(View view) {
         Toast.makeText(this, "Iniciar Sessão", Toast.LENGTH_SHORT).show();
-        createAccount create = new createAccount();
+        CreateAccount create = new CreateAccount();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, create, create.getTag()).commit();
@@ -89,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void carrinho_click(MenuItem item) {
         Toast.makeText(this, "Carrinho de Compras", Toast.LENGTH_SHORT).show();
-        shop_cart cart = new shop_cart();
+        ShopCart cart = new ShopCart();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, cart, cart.getTag()).commit();
@@ -108,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void definicoes_click(MenuItem item) {
 
         Toast.makeText(this, "Referências", Toast.LENGTH_SHORT).show();
-        search search = new search();
+        Search search = new Search();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, search, search.getTag()).commit();
@@ -116,28 +110,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
+
     public void createdClick(View view) {
-        if (createAccount.nome.getError() == null && createAccount.nomeprop.getError()==null && createAccount.nomeapel.getError()==null && createAccount.nomeprop.getError()== null && createAccount.mail.getError()==null && createAccount.passwd.getError()==null){
-            createAccount.info[0]=createAccount.nome.getText().toString();
-            createAccount.info[1]=createAccount.passwd.getText().toString();
-            createAccount.info[2]=createAccount.mail.getText().toString();
-            createAccount.info[3]=createAccount.nomeprop.getText().toString();
-            createAccount.info[4]=createAccount.nomeapel.getText().toString();
+        if (CreateAccount.nome.getError() == null && CreateAccount.nomeprop.getError()==null && CreateAccount.nomeapel.getError()==null && CreateAccount.nomeprop.getError()== null && CreateAccount.mail.getError()==null && CreateAccount.passwd.getError()==null){
+            CreateAccount.info[0]= CreateAccount.nome.getText().toString();
+            CreateAccount.info[1]= CreateAccount.passwd.getText().toString();
+            CreateAccount.info[2]= CreateAccount.mail.getText().toString();
+            CreateAccount.info[3]= CreateAccount.nomeprop.getText().toString();
+            CreateAccount.info[4]= CreateAccount.nomeapel.getText().toString();
         }
-        for(int i=0;i<createAccount.info.length;i++){
-            System.out.println(createAccount.info[i]);
+        for(int i = 0; i< CreateAccount.info.length; i++){
+            System.out.println(CreateAccount.info[i]);
 
         }
         for(int i=0;i<login.nomes.length;i++){
             if(login.nomes[i]==null){
-                login.nomes[i]=createAccount.info[0];
+                login.nomes[i]= CreateAccount.info[0];
                 break;
             }
 
         }
         for(int i=0;i<login.passwords.length;i++){
             if(login.passwords[i]==null){
-                login.passwords[i]=createAccount.info[1];
+                login.passwords[i]= CreateAccount.info[1];
                 break;
             }
 
@@ -191,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void comparador_click(MenuItem item) {
         Toast.makeText(this, "Comparador", Toast.LENGTH_SHORT).show();
-        comparador comparador = new comparador();
+        Comparador comparador = new Comparador();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
@@ -204,6 +200,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
+
+    }
+
+    public void limpacomparador(View view) {
+        Dados.produtosComparar.clear();
+        Toast.makeText(this, "Comparador", Toast.LENGTH_SHORT).show();
+        Comparador comparador = new Comparador();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
+    }
+
+    public void searchclick(View view) {
+
+        // nao esquecer de fazer o if por causa da imagem
+        Toast.makeText(this, "Referências", Toast.LENGTH_SHORT).show();
+        Search search = new Search();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment, search, search.getTag()).commit();
 
     }
 

@@ -7,9 +7,9 @@
     tools:context=".ComparadorItem"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:id="@+id/nomeitemC"
+        android:id="@+id/nomeitemC2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nome"
@@ -17,7 +17,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"/>
     <ImageView
-        android:id="@+id/imgItemC"
+        android:id="@+id/imgItemC2"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/add"
@@ -26,10 +26,10 @@
         android:onClick="searchclick"
         android:layout_marginEnd="10dp"
         android:scaleType="fitCenter"
-        />
+         />
 
     <TextView
-        android:id="@+id/precos"
+        android:id="@+id/precos2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -39,7 +39,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/specs"
+        android:id="@+id/specs2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

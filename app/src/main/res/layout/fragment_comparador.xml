@@ -5,21 +5,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".comparador"
-    android:orientation="horizontal">
+    tools:context=".Comparador"
+    android:orientation="vertical">
 
-   <LinearLayout
-       android:id="@+id/comp_1"
-       android:layout_weight="1"
-       android:layout_width="0dp"
-       android:layout_height="match_parent"
-       android:orientation="vertical" />
 
-   <LinearLayout
-       android:id="@+id/comp_2"
-       android:layout_weight="1"
-       android:layout_width="0dp"
-       android:layout_height="match_parent"
-       android:orientation="vertical" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1    "
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/comp_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="0dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/comp_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="19dp"
+        android:onClick="limpacomparador"
+        android:text="Limpa" />
+
+
+
+
 
 </LinearLayout>

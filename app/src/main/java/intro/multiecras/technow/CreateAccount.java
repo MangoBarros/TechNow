@@ -16,7 +16,7 @@ import android.widget.EditText;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class createAccount extends Fragment {
+public class CreateAccount extends Fragment {
     public static String[] info = new String[]{
             "",
             "",
@@ -34,7 +34,7 @@ public class createAccount extends Fragment {
 
 
 
-    public createAccount() {
+    public CreateAccount() {
         // Required empty public constructor
     }
 

@@ -1,13 +1,12 @@
 package intro.multiecras.technow;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Dados {
 
-    static final List<Product> produtos = new ArrayList<>();
-    static final List<Product> produtosComparar = new ArrayList<>();
-    private static final int[] imgs =new int[]{
+    public static final int[] imgs = {
             R.drawable.samsung,
             R.drawable.samsung2,
             R.drawable.apple_iphone_6s,
@@ -21,7 +20,7 @@ public class Dados {
 
     };
 
-    private static final String[] spec = new String[]{
+    public static final String[] spec = {
             "Éqwdqdqw",
             "É",
             "É",
@@ -30,37 +29,21 @@ public class Dados {
             "É",
             "É",
             "É",
-            "É",
+            "É"
 
     };
-
-
-    public Dados(){
-        Product item1 = new Product("Samsung", "419 €", spec[0], imgs[0]);
-        produtos.add(item1);
-        Product item2 = new Product("Samsung2", "919 €", spec[1], imgs[1]);
-        produtos.add(item2);
-        Product item3 = new Product("Apple 6s", "3419 €", spec[2], imgs[2]);
-        produtos.add(item3);
-        Product item4 = new Product("Apple MacBook 13", "1200 €", spec[3], imgs[3]);
-        produtos.add(item4);
-        Product item5 = new Product("Huawei", "819 €", spec[4], imgs[4]);
-        produtos.add(item5);
-        Product item6 = new Product("SmartWatch", "219 €", spec[5], imgs[5]);
-        produtos.add(item6);
-        Product item7 = new Product("Mac Pro", "1419 €", spec[6], imgs[6]);
-        produtos.add(item7);
-        Product item8 = new Product("surface Windows", "219 €", spec[7], imgs[7]);
-        produtos.add(item8);
-        Product item9 = new Product("surface Windows Pro", "719 €", spec[8], imgs[8]);
-        produtos.add(item9);
-
-
-        produtosComparar.add(item1);
-        produtosComparar.add(item2);
-
-    }
-
-
+    private static final Product[] prodArr = {
+        new Product("Samsung", "419 €", Dados.spec[0], Dados.imgs[0]),
+        new Product("Samsung2", "919 €", Dados.spec[1], Dados.imgs[1]),
+        new Product("Apple 6s", "3419 €", Dados.spec[2], Dados.imgs[2]),
+        new Product("Apple MacBook 13", "1200 €", Dados.spec[3], Dados.imgs[3]),
+        new Product("Huawei", "819 €", Dados.spec[4], Dados.imgs[4]),
+        new Product("SmartWatch", "219 €", Dados.spec[5], Dados.imgs[5]),
+        new Product("Mac Pro", "1419 €", Dados.spec[6], Dados.imgs[6]),
+        new Product("surface Windows", "219 €", Dados.spec[7], Dados.imgs[7]),
+        new Product("surface Windows Pro", "719 €", Dados.spec[8], Dados.imgs[8])
+    };
+    public static final List<Product> produtos = new ArrayList<>(Arrays.asList(prodArr));
+    public static final List<Product> produtosComparar = new ArrayList<>();
 
 }

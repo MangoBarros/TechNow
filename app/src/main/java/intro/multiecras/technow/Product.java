@@ -4,7 +4,7 @@ class Product {
 
     String nome;
     String preco;
-    private String spec;
+    String spec;
     int idimg;
 
 

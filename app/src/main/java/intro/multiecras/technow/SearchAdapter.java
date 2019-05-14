@@ -17,9 +17,8 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class searchAdapter extends BaseAdapter {
+public class SearchAdapter extends BaseAdapter {
     private final Context ctx;
-    Dados dados = new Dados();
 
 
 
@@ -52,15 +51,7 @@ public class searchAdapter extends BaseAdapter {
 
     };
 
-
-
-
-
-
-
-
-
-    searchAdapter(Context ctx) {
+    SearchAdapter(Context ctx) {
         this.ctx =ctx;
     }
 
@@ -84,27 +75,30 @@ public class searchAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = LayoutInflater.from(this.ctx).inflate(R.layout.row_search,null);
 
+
         ImageView img = v.findViewById(R.id.imgItem);
-        img.setImageResource(dados.produtos.get(position).idimg);
+
+        img.setImageResource(Dados.produtos.get(position).idimg);
 
         TextView text = v.findViewById(R.id.textItem);
-        text.setText(dados.produtos.get(position).nome);
+        text.setText(Dados.produtos.get(position).nome);
 
         ImageButton bt = v.findViewById(R.id.addCarrinobutton);
         bt.setImageResource(this.botoes[position]);
 
 
         TextView precos = v.findViewById(R.id.textpreco);
-        precos.setText(dados.produtos.get(position).preco);
+        precos.setText(Dados.produtos.get(position).preco);
 
         ImageButton btcomp= v.findViewById(R.id.addComparadorbutton);
         btcomp.setImageResource(this.botoescompara[position]);
         btcomp.setOnClickListener((View) ->{
 
 
+            if(Dados.produtosComparar.size() == 2) Dados.produtosComparar.clear();
 
-            ComparadorItem comparador = new ComparadorItem();
-            comparador.nome_prod=dados.produtos.get(position).nome;
+            Dados.produtosComparar.add(Dados.produtos.get(position));
+            Comparador comparador = new Comparador();
             FragmentManager manager =((MainActivity)ctx).getSupportFragmentManager();
             manager.beginTransaction()
                     .replace(R.id.render_fragment, comparador, comparador.getTag()).commit();
