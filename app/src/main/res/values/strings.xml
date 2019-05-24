@@ -20,8 +20,25 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="voltar_sessao">Voltar</string>
-    <string name="comparador">Comparador</string>
-    <string name="encomendas">Encomendas</string>
     <string name="preco">Preço</string>
     <string name="specs">Especificações</string>
+    <string name="comparador">Comparador</string>
+    <string name="carrinho_de_compras">Carrinho de Compras</string>
+    <string name="inicio">Inicio</string>
+    <string name="adiciona_ao_comparador">Adiciona ao Comparador</string>
+    <string name="adiciona_ao_carrinho">Adiciona ao Carrinho</string>
+    <string name="quantidade">1</string>
+    <string name="limpa">Limpa</string>
+    <string name="iniciar_encomenda">Iniciar Encomenda</string>
+    <string name="encomendas">Confirme</string>
+    <string name="preco_total">0 €</string>
+    <string name="etapas_1">Etapa 1 de 4..</string>
+    <string name="etapas_2">Etapa 2 de 4..</string>
+    <string name="etapas_3">Etapa 3 de 4..</string>
+    <string name="etapas_4">Etapa 4 de 4..</string>
+    <string name="confirm_morada">Confirme a sua Morada</string>
+    <string name="avancar">Avançar</string>
+    <string name="voltar">Voltar</string>
+    <string name="criar_morada">Criar Morada</string>
+
 </resources>

@@ -8,15 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.Map;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ShopCart extends Fragment {
+public class Encomenda extends Fragment {
+    double preco_total;
 
 
-    public ShopCart() {
+    public Encomenda() {
         // Required empty public constructor
     }
 
@@ -25,17 +29,21 @@ public class ShopCart extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
+        for(Map.Entry<Product, Integer> cartLine: Dados.cart.entrySet()) {
+            preco_total += (cartLine.getKey().preco * cartLine.getValue());
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop_cart, container, false);
+        return inflater.inflate(R.layout.fragment_encomenda, container, false);
     }
-
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ListView list_carrinho = getView().findViewById(R.id.list_carrinho);
-        list_carrinho.setAdapter(new Carrinho_Adapter(getContext()));
+        TextView preco_totaltv = getView().findViewById(R.id.preco_total);
+        preco_totaltv.setText(preco_total+" €");
+
+        ListView list_encomenda = getView().findViewById(R.id.list_encomenda);
+        list_encomenda.setAdapter(new Encomenda_Adapter(getContext()));
     }
 }

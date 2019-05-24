@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void login_click(MenuItem item) {
-        Toast.makeText(this, "Iniciar Sessão", Toast.LENGTH_SHORT).show();
+
         login login = new login();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void create_click(View view) {
-        Toast.makeText(this, "Iniciar Sessão", Toast.LENGTH_SHORT).show();
+
         CreateAccount create = new CreateAccount();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void carrinho_click(MenuItem item) {
-        Toast.makeText(this, "Carrinho de Compras", Toast.LENGTH_SHORT).show();
+
         ShopCart cart = new ShopCart();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void home_click(MenuItem item) {
-        Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
+
         Home home = new Home();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void definicoes_click(MenuItem item) {
 
-        Toast.makeText(this, "Referências", Toast.LENGTH_SHORT).show();
+
         Search search = new Search();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         }
-        Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
+
         Home home = new Home();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -155,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void login_click_normal(View view) {
-        Toast.makeText(this, "Iniciar Sessão", Toast.LENGTH_SHORT).show();
+
         login login = new login();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -172,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (login.nome.getError() == null && login.nome.getText().length() > 0 && login.passwd.getError() == null){
 
-            Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
+
             Home home = new Home();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction()
@@ -186,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void comparador_click(MenuItem item) {
-        Toast.makeText(this, "Comparador", Toast.LENGTH_SHORT).show();
+
         Comparador comparador = new Comparador();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -205,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void limpacomparador(View view) {
         Dados.produtosComparar.clear();
-        Toast.makeText(this, "Comparador", Toast.LENGTH_SHORT).show();
+
         Comparador comparador = new Comparador();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -215,11 +217,85 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void searchclick(View view) {
 
         // nao esquecer de fazer o if por causa da imagem
-        Toast.makeText(this, "Referências", Toast.LENGTH_SHORT).show();
+
         Search search = new Search();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.render_fragment, search, search.getTag()).commit();
+
+    }
+
+    public void limpacarrinho(View view) {
+
+        if (Dados.cart.size()==0){
+            Toast.makeText(this, "O carrinho de compras já esta vazio", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Dados.cart.clear();
+            ShopCart cart = new ShopCart();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction()
+                    .replace(R.id.render_fragment,cart,cart.getTag()).commit();
+
+        }
+
+
+
+
+
+    }
+
+    public void encomendar(View view) {
+
+        if(Dados.cart.size()==0){
+            Toast.makeText(this, "Não pode encomendar porque o carrinho esta vazio", Toast.LENGTH_SHORT).show();
+
+        }else{
+            Encomenda encomenda = new Encomenda();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction()
+                    .replace(R.id.render_fragment,encomenda,encomenda.getTag()).commit();
+
+
+        }
+
+    }
+
+    public void encomendar_menu(MenuItem item) {
+        if(Dados.cart.size()==0){
+            Toast.makeText(this, "Não pode encomendar porque o carrinho esta vazio", Toast.LENGTH_SHORT).show();
+
+        }else{
+            Encomenda encomenda = new Encomenda();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction()
+                    .replace(R.id.render_fragment,encomenda,encomenda.getTag()).commit();
+
+
+
+
+        }
+
+    }
+
+    public void encomenda_confirm(View view) {
+        Encomenda_Morada morada = new Encomenda_Morada();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment,morada,morada.getTag()).commit();
+        
+
+    }
+
+    public void limpa_encomenda(View view) {
+        Dados.cart.clear();
+
+        Encomenda encomenda = new Encomenda();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment,encomenda,encomenda.getTag()).commit();
+
+
 
     }
 

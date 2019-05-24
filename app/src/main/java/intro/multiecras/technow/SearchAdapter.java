@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -23,7 +24,7 @@ public class SearchAdapter extends BaseAdapter {
 
 
 
-    private int [] botoes = new int []{
+    /*private int [] botoes = new int []{
             R.drawable.carrinho,
             R.drawable.carrinho,
             R.drawable.carrinho,
@@ -49,7 +50,7 @@ public class SearchAdapter extends BaseAdapter {
 
 
 
-    };
+    };*/
 
     SearchAdapter(Context ctx) {
         this.ctx =ctx;
@@ -58,12 +59,12 @@ public class SearchAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return this.botoescompara.length;
+        return Dados.produtos.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.botoescompara[position];
+        return Dados.produtos.get(position);
     }
 
     @Override
@@ -84,14 +85,24 @@ public class SearchAdapter extends BaseAdapter {
         text.setText(Dados.produtos.get(position).nome);
 
         ImageButton bt = v.findViewById(R.id.addCarrinobutton);
-        bt.setImageResource(this.botoes[position]);
+        bt.setImageResource(R.drawable.carrinho);
+        bt.setOnClickListener((View)->{
+                if(Dados.cart.containsKey(Dados.produtos.get(position))){
+                    Dados.cart.put(Dados.produtos.get(position),Dados.cart.get(Dados.produtos.get(position)) + 1);
+                    Toast.makeText(ctx, "Adicionou com sucesso", Toast.LENGTH_SHORT).show();
+                } else {
+                    Dados.cart.put(Dados.produtos.get(position), 1);
+                    Toast.makeText(ctx, "Adicionou com sucesso", Toast.LENGTH_SHORT).show();
+                }
+
+        });
 
 
         TextView precos = v.findViewById(R.id.textpreco);
-        precos.setText(Dados.produtos.get(position).preco);
+        precos.setText(Dados.produtos.get(position).preco+" €");
 
         ImageButton btcomp= v.findViewById(R.id.addComparadorbutton);
-        btcomp.setImageResource(this.botoescompara[position]);
+        btcomp.setImageResource(R.drawable.compara);
         btcomp.setOnClickListener((View) ->{
 
 

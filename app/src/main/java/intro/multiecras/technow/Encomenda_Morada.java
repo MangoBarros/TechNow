@@ -13,10 +13,10 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ShopCart extends Fragment {
+public class Encomenda_Morada extends Fragment {
 
 
-    public ShopCart() {
+    public Encomenda_Morada() {
         // Required empty public constructor
     }
 
@@ -24,18 +24,15 @@ public class ShopCart extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop_cart, container, false);
+        return inflater.inflate(R.layout.fragment_encomenda__morada_, container, false);
     }
-
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ListView list_carrinho = getView().findViewById(R.id.list_carrinho);
-        list_carrinho.setAdapter(new Carrinho_Adapter(getContext()));
+        ListView list_morada = getView().findViewById(R.id.lista_moradas);
+        list_morada.setAdapter(new Morada_Adapter(getContext()));
     }
 }

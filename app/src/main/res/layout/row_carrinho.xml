@@ -24,7 +24,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imgItem"
+                android:id="@+id/imgItem5"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginStart="10dp"
@@ -40,9 +40,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_toEndOf="@id/imgItem">
+                android:layout_toEndOf="@id/imgItem5">
                 <TextView
-                    android:id="@+id/textItem"
+                    android:id="@+id/textItem2"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_width="140dp"
@@ -51,48 +51,28 @@
 
                     />
 
-                <RelativeLayout
-                    android:id="@+id/botoes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textItem">
-                    <ImageButton
-                        android:id="@+id/addCarrinobutton"
-                        android:layout_width="80dp"
-                        android:backgroundTint="@android:color/transparent"
-                        android:layout_gravity="start"
-                        android:layout_height="50dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="10dp"
-                        />
 
-
-                    <TextView
-                        android:id="@+id/add_carrinho"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:layout_below="@+id/addCarrinobutton"
-                        android:text="@string/adiciona_ao_carrinho"
-                        android:textAlignment="center"
-                        android:textSize="10sp" />
-
-
-
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/layout_comparador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/botoes"
-                    android:layout_below="@+id/textItem"
+                    android:layout_below="@id/textItem2"
 
                     >
 
+                    <TextView
+                        android:id="@+id/quantidade"
+                        android:layout_marginTop="20dp"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantidade"
+                        android:layout_toRightOf="@+id/removeCarrinhobutton"
+                        />
+
                     <ImageButton
-                        android:id="@+id/addComparadorbutton"
+                        android:id="@+id/removeCarrinhobutton"
                         android:layout_width="80dp"
                         android:backgroundTint="@android:color/transparent"
                         android:layout_gravity="start"
@@ -104,13 +84,13 @@
                         />
 
                     <TextView
-                        android:id="@+id/add_comparador"
+                        android:id="@+id/add_comparador2"
                         android:layout_width="80dp"
+                        android:layout_marginStart="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/addComparadorbutton"
+                        android:layout_below="@id/removeCarrinhobutton"
                         android:text="@string/adiciona_ao_comparador"
                         android:textAlignment="center"
-                        android:layout_marginStart="10dp"
                         android:textSize="10sp" />
 
 
@@ -121,7 +101,7 @@
 
 
                 <TextView
-                    android:id="@+id/textpreco"
+                    android:id="@+id/textpreco5"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/layout_comparador"

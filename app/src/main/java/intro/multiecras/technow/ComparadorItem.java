@@ -69,7 +69,9 @@ public class ComparadorItem extends Fragment {
             textsp.setText(p.spec);
 
             TextView textpr = getActivity().findViewById(R.id.precos);
-            textpr.setText(p.preco);
+            textpr.setText(p.preco+ "€");
+            TextView textnome = getActivity().findViewById(R.id.nomeitemC);
+            textnome.setText(p.nome);
         } else if (pos == 2) {
             ImageView img = getActivity().findViewById(R.id.imgItemC2);
             img.setImageResource(p.idimg);
@@ -78,7 +80,10 @@ public class ComparadorItem extends Fragment {
             textsp.setText(p.spec);
 
             TextView textpr = getActivity().findViewById(R.id.precos2);
-            textpr.setText(p.preco);
+            textpr.setText(p.preco+" €");
+
+            TextView textnome = getActivity().findViewById(R.id.nomeitemC2);
+            textnome.setText(p.nome);
         }
 
 

@@ -27,16 +27,10 @@
             android:orderInCategory="100"
             android:title="@string/comparador"
             android:onClick="comparador_click"
-            android:icon="@drawable/user"
+            android:icon="@drawable/compara"
             app:showAsAction="never"
             />
-        <item
-            android:id="@+id/Encomendas"
-            android:orderInCategory="100"
-            android:title="@string/encomendas"
-            android:icon="@drawable/user"
-            app:showAsAction="never"
-            />
+
 
     </menu>
 
