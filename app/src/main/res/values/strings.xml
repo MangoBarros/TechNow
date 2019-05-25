@@ -55,5 +55,6 @@
     <string name="multibanco">Multibanco</string>
     <string name="hint_calendario">Clique no botão Calendario para escolher a data de entrega</string>
     <string name="titulo_data">Selecione a Data de Entrega</string>
+    <string name="remove">Remover</string>
 
 </resources>

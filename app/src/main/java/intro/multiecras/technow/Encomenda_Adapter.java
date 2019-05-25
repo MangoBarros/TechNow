@@ -50,7 +50,7 @@ public class Encomenda_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = LayoutInflater.from(this.ctx).inflate(R.layout.row_carrinho,null);
+        View v = LayoutInflater.from(this.ctx).inflate(R.layout.row_confirm,null);
 
 
         Product p = (Product) this.cart.keySet().toArray()[position];
@@ -68,7 +68,7 @@ public class Encomenda_Adapter extends BaseAdapter {
         precos.setText(""+p.preco+" €");
 
         TextView quantidade = v.findViewById(R.id.quantidade);
-        quantidade.setText("" + times);
+        quantidade.setText("Quantidade: " + times);
 
         ImageButton btdelete = v.findViewById(R.id.removeCarrinhobutton);
         btdelete.setImageResource(R.drawable.delete);
