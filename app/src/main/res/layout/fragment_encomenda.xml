@@ -8,14 +8,14 @@
     tools:context=".Encomenda">
 
     <TextView
-        android:id="@+id/titulo_encomenda"
+        android:id="@+id/titulo_multibanco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/margin_titulos"
+        android:layout_marginTop="@dimen/margin_titulos"
+        android:layout_marginEnd="@dimen/margin_titulos"
         android:text="@string/encomendas"
-        android:textSize="30sp"
+        android:textSize="@dimen/size_titulos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etapas_1" />
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toTopOf="@+id/preco_total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_encomenda">
+        app:layout_constraintTop_toBottomOf="@+id/titulo_multibanco">
 
         <ListView
             android:id="@+id/list_encomenda"
@@ -42,10 +42,10 @@
     <TextView
         android:id="@+id/etapas_1"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_titulos"
         android:text="@string/etapas_1"
-        android:textSize="18sp"
+        android:textSize="@dimen/size_etapas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="@dimen/margin_botoesbottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

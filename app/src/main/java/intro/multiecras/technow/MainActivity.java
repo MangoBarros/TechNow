@@ -1,21 +1,27 @@
 package intro.multiecras.technow;
 
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    public static String dateMessage;
     private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -261,24 +267,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void encomendar_menu(MenuItem item) {
-        if(Dados.cart.size()==0){
-            Toast.makeText(this, "Não pode encomendar porque o carrinho esta vazio", Toast.LENGTH_SHORT).show();
-
-        }else{
-            Encomenda encomenda = new Encomenda();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction()
-                    .replace(R.id.render_fragment,encomenda,encomenda.getTag()).commit();
 
 
+    public void encomenda_confirm(View view) {
+        Double preco_total=0.0;
+        String produtos="";
+        for( int i=0; i<Dados.cart.size();i++){
+            Product p =(Product)Dados.cart.keySet().toArray()[i];
+            if (produtos.equals("")){
+                produtos=p.nome;
+            }else {
+                produtos=(produtos+"\n"+p.nome);
+
+            }
 
 
         }
+        for(Map.Entry<Product, Integer> cartLine: Dados.cart.entrySet()) {
+            preco_total += (cartLine.getKey().preco * cartLine.getValue());
+        }
 
-    }
-
-    public void encomenda_confirm(View view) {
+        EncomendaObj encomenda = new EncomendaObj(produtos,"",preco_total,"multibanco","");
+        Dados.encomendas.add(encomenda);
         Encomenda_Morada morada = new Encomenda_Morada();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
@@ -298,6 +308,113 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+    public void pagamento_click(View view) {
+        int numero=0;
+        for(int i=0;i<Dados.moradas.size();i++){
+            if (Dados.moradas.get(i).check)
+                numero++;
+
+        }
+
+        if(numero==1){
+            System.out.println(numero);
+
+        } else {
+            System.out.println(numero);
+        }
+
+
+
+    }
+
+    public void multibanco_click(View view) {
+        fragment_mulltibanco multibanco = new fragment_mulltibanco();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment,multibanco,multibanco.getTag()).commit();
+
+
+    }
+
+    public void multibanco_add_numero(View view) {
+        int n = 0;
+        n++;
+        TextView tx = findViewById(R.id.insira_2);
+        EditText Ex = findViewById(R.id.input_1);
+        EditText Ex2 = findViewById(R.id.input_2);
+        View v = findViewById(R.id.view_multibanco);
+
+
+        if (tx.getVisibility()==View.INVISIBLE && Ex.getText().toString().matches("\\d\\d\\d\\d\\s\\d\\d\\d\\d\\s\\d\\d\\d\\d\\s\\d\\d\\d\\d")){
+            tx.setVisibility(View.VISIBLE);
+            Ex2.setVisibility(View.VISIBLE);
+            v.setVisibility(View.GONE);
+
+        } else {
+                if(tx.getVisibility()==View.INVISIBLE)
+                    Toast.makeText(this, "Não inseriu um numero válido", Toast.LENGTH_SHORT).show();
+                if(tx.getVisibility()==View.VISIBLE && Ex2.getText().toString().matches("\\d\\d\\d\\d\\d")&& Ex2.getText().toString().equals("12345")){
+                    Dados.encomendas.get(Dados.encomendas.size()-1).pagamento=(""+Ex.getText().toString());
+                    Encomenda_Datas datas = new Encomenda_Datas();
+                    FragmentManager manager = getSupportFragmentManager();
+                        manager.beginTransaction()
+                                .replace(R.id.render_fragment,datas,datas.getTag()).commit();
+                        return;
+
+
+                }if(tx.getVisibility()==View.VISIBLE){
+                Toast.makeText(this, "Não inseriu um numero válido", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+
+
+    }
+
+    public void confirmar_final_click(View view) {
+        Confirmar_Encomenda confirmar = new Confirmar_Encomenda();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment,confirmar,confirmar.getTag()).commit();
+
+
+
+
+
+
+    }
+    public void showDatePicker(View view) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(),"datePicker");
+    }
+
+    public void processDatePickerResult(int year, int month, int day) {
+        String month_string = Integer.toString(month+1);
+        String day_string = Integer.toString(day);
+        String year_string = Integer.toString(year);
+         this.dateMessage = (day_string +
+                "/" + month_string + "/" + year_string);
+    }
+
+    public void encomenda_done(View view) {
+        Dados.encomendas.get(Dados.encomendas.size()-1).confirmado=true;
+        Home home = new Home();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment, home, home.getTag()).commit();
+
+        Toast.makeText(this, "A encomenda foi concluida", Toast.LENGTH_SHORT).show();
+    }
+
+    public void morada_click(View view) {
+        Encomenda_Morada morada = new Encomenda_Morada();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.render_fragment,morada,morada.getTag()).commit();
+    }
+
+
 
 
 

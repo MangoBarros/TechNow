@@ -9,54 +9,42 @@
 
 
     <TextView
-        android:id="@+id/titulo_multibanco"
+        android:id="@+id/titulo_Datas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/margin_titulos"
         android:layout_marginEnd="8dp"
-        android:text="@string/confirm_morada"
+        android:text="@string/titulo_data"
         android:textSize="@dimen/size_titulos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etapas_1" />
+        app:layout_constraintTop_toBottomOf="@+id/etapas_4" />
 
     <TextView
-        android:id="@+id/etapas_1"
+        android:id="@+id/info_calendario"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/hint_calendario"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_Datas" />
+
+    <TextView
+        android:id="@+id/etapas_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_titulos"
-        android:text="@string/etapas_2"
+        android:text="@string/etapas_4"
         android:textSize="@dimen/size_etapas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/layout_morada"
-        android:layout_width="match_parent"
-        android:layout_height="347dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/botoesencomenda"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_multibanco">
-
-        <ListView
-            android:id="@+id/lista_moradas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/botoesencomenda"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titulo_multibanco">
-
-
-        </ListView>
-
-    </LinearLayout>
 
 
 
@@ -74,7 +62,7 @@
             android:id="@+id/voltar"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:onClick="encomendar"
+            android:onClick="multibanco_click"
             android:layout_height="wrap_content"
             android:text="@string/voltar" />
 
@@ -82,13 +70,26 @@
             android:id="@+id/avançar"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:onClick="confirmar_final_click"
             android:layout_height="wrap_content"
-            android:text="Criar morada" />
+            android:text="@string/finalizar" />
 
     </LinearLayout>
 
-
-
+    <Button
+        android:id="@+id/calendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Calendario"
+        android:onClick="showDatePicker"
+        app:layout_constraintBottom_toTopOf="@+id/botoesencomenda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_calendario"
+        app:layout_constraintVertical_bias="0.105" />
 
 
 </android.support.constraint.ConstraintLayout>

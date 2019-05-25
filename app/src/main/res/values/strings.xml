@@ -40,5 +40,20 @@
     <string name="avancar">Avançar</string>
     <string name="voltar">Voltar</string>
     <string name="criar_morada">Criar Morada</string>
+    <string name="tipo_pagamento_1">Cartão Multibanco</string>
+    <string name="tipo_pagamento_2">paySafeCard</string>
+    <string name="etapas_3_1">Etapa 3.1 de 4.. </string>
+    <string name="numero_multibanco">Insira o Numero do Cartão Multibanco</string>
+    <string name="numero_multibanco_2">Insira o Codigo enviado para o seu telemovel </string>
+    <string name="finalizar">Finalizar</string>
+    <string name="etapas_confirm">Confirmar</string>
+    <string name="confirme_os_dados">Confirme os Dados</string>
+    <string name="metodo_pagamento">Método de Pagamento</string>
+    <string name="continuar">Continuar</string>
+    <string name="codigo">Codigo</string>
+    <string name="no_cartao">Numero do Cartão de Crédito</string>
+    <string name="multibanco">Multibanco</string>
+    <string name="hint_calendario">Clique no botão Calendario para escolher a data de entrega</string>
+    <string name="titulo_data">Selecione a Data de Entrega</string>
 
 </resources>

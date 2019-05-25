@@ -31,18 +31,7 @@ public class Dados {
 
 
 
-    public static  String [] quantidade = {
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0",
-            "0"
 
-    };
 
     public static final String[] spec = {
                     "Smartphone Dual SIM\n" +
@@ -90,19 +79,13 @@ public class Dados {
     };
     public static final List<Product> produtos = new ArrayList<>(Arrays.asList(prodArr));
     public static final List<Product> produtosComparar = new ArrayList<>();
-
-
-
     private static final Morada[] moradas_arr = {
             new Morada("Rua do Caçamba","Viana do Castilho",10),
             new Morada("Rua do Macaco Voador","Porta",311),
 
     };
-
-    public static final List<Product> produtosEncomenda= new ArrayList<>();
     public static final List<Morada> moradas = new ArrayList<>(Arrays.asList(moradas_arr));
-
-
+    public static final List<EncomendaObj> encomendas = new ArrayList<>();
 
 
 

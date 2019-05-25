@@ -52,9 +52,6 @@ public class login extends Fragment {
 
          passwd = getActivity().findViewById(R.id.input_passwd);
          nome = getActivity().findViewById(R.id.input_nome);
-
-
-
          passwd.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

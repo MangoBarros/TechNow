@@ -30,10 +30,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <CheckBox
-                    android:id="@+id/checkBox"
+                <ImageButton
+                    android:id="@+id/selecion_morada"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add"
+                    android:layout_margin="10dp"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="160dp" />
 
