@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/pesquisa_menu"
-        android:icon="@drawable/settings"
+        android:icon="@drawable/search"
         android:title="@string/pesquisa_menu"
 
         />

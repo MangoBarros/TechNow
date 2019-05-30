@@ -1,12 +1,12 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 public class EncomendaObj {
-    String produtos;
-    String morada;
-    Double preco;
-    String pagamento;
-    String data;
-    Boolean confirmado;
+    public String produtos;
+    public String morada;
+    public Double preco;
+    public String pagamento;
+    public String data;
+    public Boolean confirmado;
 
 
     public EncomendaObj(String produtos, String morada, Double preco, String pagamento, String data) {

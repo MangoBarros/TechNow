@@ -1,7 +1,6 @@
 package intro.multiecras.technow;
 
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.DialogFragment;
@@ -10,14 +9,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CalendarView;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Calendar;
 import java.util.Map;
+
+import intro.multiecras.technow.Fragments.Comparador;
+import intro.multiecras.technow.Fragments.ComparadorItem;
+import intro.multiecras.technow.Fragments.Confirmar_Encomenda;
+import intro.multiecras.technow.Fragments.CreateAccount;
+import intro.multiecras.technow.Fragments.DatePickerFragment;
+import intro.multiecras.technow.Fragments.Encomenda;
+import intro.multiecras.technow.Fragments.EncomendaObj;
+import intro.multiecras.technow.Fragments.Encomenda_Datas;
+import intro.multiecras.technow.Fragments.Encomenda_Morada;
+import intro.multiecras.technow.Fragments.Home;
+import intro.multiecras.technow.Fragments.Search;
+import intro.multiecras.technow.Fragments.ShopCart;
+import intro.multiecras.technow.Fragments.fragment_mulltibanco;
+import intro.multiecras.technow.Fragments.login;
+import intro.multiecras.technow.Objetos.Product;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

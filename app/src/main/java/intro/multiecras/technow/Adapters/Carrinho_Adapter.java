@@ -1,10 +1,8 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Adapters;
 
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
-import java.util.List;
+
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.Objetos.Product;
+import intro.multiecras.technow.R;
 
 
 /**
@@ -25,7 +26,7 @@ public class Carrinho_Adapter extends BaseAdapter {
     private final Context ctx;
     private final HashMap<Product, Integer> cart;
 
-     Carrinho_Adapter(Context ctx) {
+     public Carrinho_Adapter(Context ctx) {
          this.ctx =ctx;
          this.cart = Dados.cart;
      }

@@ -1,4 +1,4 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 
 import android.app.Dialog;
@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import intro.multiecras.technow.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.

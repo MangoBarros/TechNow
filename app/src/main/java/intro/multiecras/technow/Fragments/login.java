@@ -1,4 +1,4 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import intro.multiecras.technow.R;
 
 import static intro.multiecras.technow.R.drawable.carrinho;
 

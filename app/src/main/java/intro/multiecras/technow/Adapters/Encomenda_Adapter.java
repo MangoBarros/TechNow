@@ -1,8 +1,7 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Adapters;
 
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
+
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.Objetos.Product;
+import intro.multiecras.technow.R;
 
 
 /**

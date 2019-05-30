@@ -1,4 +1,4 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.MainActivity;
+import intro.multiecras.technow.R;
 
 
 /**

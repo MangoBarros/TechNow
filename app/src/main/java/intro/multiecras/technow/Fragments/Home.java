@@ -1,4 +1,4 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import intro.multiecras.technow.R;
 
 
 /**

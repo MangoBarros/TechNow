@@ -1,7 +1,6 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Adapters;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +12,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import intro.multiecras.technow.Fragments.Comparador;
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.MainActivity;
+import intro.multiecras.technow.R;
 
 
 /**
@@ -52,7 +56,7 @@ public class SearchAdapter extends BaseAdapter {
 
     };*/
 
-    SearchAdapter(Context ctx) {
+    public SearchAdapter(Context ctx) {
         this.ctx =ctx;
     }
 

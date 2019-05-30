@@ -1,4 +1,4 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Fragments;
 
 
 import android.os.Bundle;
@@ -11,6 +11,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.Map;
+
+import intro.multiecras.technow.Adapters.Encomenda_Adapter;
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.Objetos.Product;
+import intro.multiecras.technow.R;
 
 
 /**

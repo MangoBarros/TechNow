@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import intro.multiecras.technow.Fragments.EncomendaObj;
+import intro.multiecras.technow.Objetos.Morada;
+import intro.multiecras.technow.Objetos.Product;
+
 public class Dados {
 
 

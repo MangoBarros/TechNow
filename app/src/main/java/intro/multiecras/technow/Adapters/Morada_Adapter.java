@@ -1,17 +1,20 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Adapters;
 
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import intro.multiecras.technow.Dados;
+import intro.multiecras.technow.Fragments.Encomenda_Pagamento;
+import intro.multiecras.technow.MainActivity;
+import intro.multiecras.technow.R;
 
 
 /**

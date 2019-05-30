@@ -1,10 +1,10 @@
-package intro.multiecras.technow;
+package intro.multiecras.technow.Objetos;
 
 public class Morada {
-    String rua;
-    String cidade;
-    int nPorta;
-    Boolean check;
+    public String rua;
+    public String cidade;
+    public int nPorta;
+    public Boolean check;
 
 
     public Morada(String Rua,String Cidade, int nPorta){
